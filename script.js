@@ -107,10 +107,23 @@ async function runSearch(token) {
   $('search-status').textContent = 'Dopasowano';
   $('reveal-next').disabled = false;
 }
-$('reveal-next').addEventListener('click', () => showStage(3));
+const birthdayMusic = $('birthday-music');
+
+$('reveal-next').addEventListener('click', () => {
+    birthdayMusic.currentTime = 0;
+    birthdayMusic.volume = 0.7;
+
+    birthdayMusic.play().catch(error => {
+        console.warn('Nie udało się odtworzyć muzyki:', error);
+    });
+
+    showStage(3);
+});
 $('plan-next').addEventListener('click', () => showStage(4));
 $('celebrate').addEventListener('click', () => { $('celebrate').hidden = true; $('final-message').hidden = false; confetti(110); });
 $('restart').addEventListener('click', () => {
+  birthdayMusic.pause();
+  birthdayMusic.currentTime = 0;
   cancelAnimationFrame(scanFrame); scanning = false; autoScan = false;
   $('scan').classList.remove('scanning'); $('scan').disabled = false; $('scan-alt').disabled = false;
   updateScan(0); $('scan-instruction').textContent = 'Przyłóż palec i przytrzymaj przez 2 sekundy';
