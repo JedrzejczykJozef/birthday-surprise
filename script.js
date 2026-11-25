@@ -121,7 +121,7 @@ $('reveal-next').addEventListener('click', () => {
 });
 $('plan-next').addEventListener('click', () => showStage(4));
 $('celebrate').addEventListener('click', () => { $('celebrate').hidden = true; $('final-message').hidden = false; confetti(110); });
-$('restart').addEventListener('click', () => {
+$('restart')?.addEventListener('click', () => {
   birthdayMusic.pause();
   birthdayMusic.currentTime = 0;
   cancelAnimationFrame(scanFrame); scanning = false; autoScan = false;
