@@ -84,7 +84,7 @@ $('profile-next').addEventListener('click', () => showStage(2));
 const searchLines = [
   'Analiza zainteresowań: taniec i muzyka…',
   'Uwzględnianie poziomu uzależnienia od kawy…',
-  'Odrzucanie opcji: skarpetki, odkurzacz…',
+  'Odrzucanie opcji: skarpetki, kubek…',
   'Sprawdzanie poziomu potencjalnej ekscytacji…',
   'Znaleziono idealny prezent!'
 ];
