@@ -5,21 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#101519">
-  <title>Birthday Surprise</title>
-  <link rel="stylesheet" href="./style.css?v=2">
-  <script src="./script.js?v=2" defer></script>
+  <title>Urodzinowa niespodzianka</title>
+  <link rel="stylesheet" href="./style.css?v=3">
+  <script src="./script.js?v=3" defer></script>
 </head>
 <body>
   <canvas id="confetti" aria-hidden="true"></canvas>
   <div class="app" id="app">
     <header class="topbar">
-      <div class="brand"><span class="brand-mark" aria-hidden="true">✳</span><span>birthday<span class="brand-accent">.lab</span><small>PRIVATE EXPERIENCE / 01</small></span></div>
-      <span class="online"><i></i> SYSTEM ONLINE</span>
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✳</span><span>birthday<span class="brand-accent">.lab</span></span></div>
     </header>
     <nav class="progress" aria-label="Postęp"><div class="progress-track" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><p id="step-label">01 / 05 — Weryfikacja</p></nav>
     <main id="main">
       <section class="screen" data-screen="0" aria-labelledby="scan-title">
-        <div class="intro"><span class="eyebrow">IDENTITY CHECK</span><h1 id="scan-title" tabindex="-1">Mamy dla Ciebie<br>pewną <em>sprawę.</em></h1><p>W systemie pojawił się nieodebrany prezent. Najpierw musimy sprawdzić, czy trafi w odpowiednie ręce.</p></div>
+        <div class="intro"><h1 id="scan-title" tabindex="-1">Mamy dla Ciebie<br>pewną <em>sprawę.</em></h1><p>W systemie pojawił się nieodebrany prezent. Najpierw musimy sprawdzić, czy trafi w odpowiednie ręce.</p></div>
         <div class="scanner-wrap">
           <div class="scanner-orbit" aria-hidden="true"></div>
           <button class="scanner" id="scan" type="button" aria-label="Przytrzymaj, aby rozpocząć symulację skanowania odcisku palca">
@@ -30,12 +29,11 @@
         </div>
         <p class="scan-instruction" id="scan-instruction" aria-live="polite">Przyłóż palec i przytrzymaj przez 2 sekundy</p>
         <button class="text-button" id="scan-alt" type="button">Rozpocznij skan bez przytrzymywania <span>↗</span></button>
-        <div class="notice"><span class="notice-icon">ⓘ</span> To symulacja — nie pobieramy danych biometrycznych.</div>
       </section>
       <section class="screen" data-screen="1" hidden aria-labelledby="profile-title">
-        <div class="intro"><span class="eyebrow">PROFILE ANALYSIS</span><h1 id="profile-title" tabindex="-1">To zdecydowanie <em>Ty.</em></h1><p>Tożsamość potwierdzona. Trwa odczytywanie niezwykle ważnych informacji o solenizantce.</p></div>
+        <div class="intro"><h1 id="profile-title" tabindex="-1">To zdecydowanie <em>Ty.</em></h1><p>Tożsamość potwierdzona. Trwa odczytywanie niezwykle ważnych informacji o solenizantce.</p></div>
         <div class="profile-list" id="profile-list">
-          <article class="profile-item"><span class="item-icon">✦</span><div><small>ULUBIONE TV SHOW</small><strong>Taniec z gwiazdami</strong></div><span class="verified">✓</span></article>
+          <article class="profile-item"><span class="item-icon">✦</span><div><small>ULUBIONY PROGRAM TV</small><strong>Taniec z gwiazdami</strong></div><span class="verified">✓</span></article>
           <article class="profile-item"><span class="item-icon">♪</span><div><small>ULUBIONA CELEBRYTKA</small><strong>Shakira</strong></div><span class="verified">✓</span></article>
           <article class="profile-item"><span class="item-icon">☕</span><div><small>ULUBIONY NAPÓJ</small><strong>Kawa</strong></div><span class="verified">✓</span></article>
           <article class="profile-item"><span class="item-icon">♨</span><div><small>ULUBIONE DANIE</small><strong>Paella</strong></div><span class="verified">✓</span></article>
@@ -44,35 +42,33 @@
         <button class="primary" id="profile-next" disabled>Znajdź mój prezent <span>→</span></button>
       </section>
       <section class="screen" data-screen="2" hidden aria-labelledby="match-title">
-        <div class="intro"><span class="eyebrow">GIFT MATCH ENGINE</span><h1 id="match-title" tabindex="-1">Szukamy czegoś <em>idealnego.</em></h1><p>Nasz zupełnie poważny algorytm analizuje Twoje preferencje.</p></div>
+        <div class="intro"><h1 id="match-title" tabindex="-1">Szukamy czegoś <em>idealnego.</em></h1><p>Nasz zupełnie poważny algorytm analizuje Twoje preferencje.</p></div>
         <div class="search-visual" aria-hidden="true"><div class="search-ring ring-a"></div><div class="search-ring ring-b"></div><div class="search-core" id="search-core">✳</div></div>
         <div class="search-log" id="search-log" aria-live="polite"></div>
-        <div class="data-panel"><div><small>POSTĘP DOPASOWANIA</small><strong id="search-score">0%</strong></div><span class="status" id="search-status">Szukam...</span><div class="meter"><span id="search-meter"></span></div></div>
+        <div class="data-panel"><div><small>POSTĘP DOPASOWANIA</small><strong id="search-score">0%</strong></div><span class="status" id="search-status">Szukam…</span><div class="meter"><span id="search-meter"></span></div></div>
         <button class="primary" id="reveal-next" disabled>Otwórz prezent <span>→</span></button>
       </section>
       <section class="screen" data-screen="3" hidden aria-labelledby="gift-title">
-        <div class="intro reveal-intro"><span class="eyebrow">MATCH FOUND / 100%</span><h1 id="gift-title" tabindex="-1">Mamma mia!</h1><p>Wynik analizy: czas zostać Dancing Queen.</p></div>
+        <div class="intro reveal-intro"><h1 id="gift-title" tabindex="-1">Mamma mia!</h1><p>Wynik analizy: czas zostać królową parkietu.</p></div>
         <div class="ticket" aria-label="Pamiątkowe zaproszenie na ABBA Voyage, ABBA Arena, Londyn, godzina 15:00">
-          <div class="ticket-art" aria-hidden="true"><div class="disco-ball"></div><span class="star star-a">✦</span><span class="star star-b">✧</span><span class="star star-c">✦</span><div class="ticket-rays"></div><div class="ticket-art-text">THE<br> BIRTHDAY<br> EXPERIENCE<span>★</span></div></div>
-          <div class="ticket-body"><small>YOU'RE INVITED TO</small><h2>ABBA<span>VOYAGE</span></h2><div class="ticket-meta"><div><small>MIEJSCE</small><strong>ABBA Arena</strong><span>London</span></div><div><small>START</small><strong>15:00</strong><span>Birthday edition</span></div></div><div class="ticket-foot"><span>ADMIT TWO</span><span>✦</span><span>PAMIĄTKOWE ZAPROSZENIE</span></div></div>
+          <div class="ticket-art" aria-hidden="true"><div class="disco-ball"></div><span class="star star-a">✦</span><span class="star star-b">✧</span><span class="star star-c">✦</span><div class="ticket-rays"></div><div class="ticket-art-text">URODZINOWA<br> NIESPODZIANKA<span>★</span></div></div>
+          <div class="ticket-body"><small>ZAPROSZENIE NA</small><h2>ABBA<span>VOYAGE</span></h2><div class="ticket-meta"><div><small>MIEJSCE</small><strong>ABBA Arena</strong><span>Londyn</span></div><div><small>GODZINA</small><strong>15:00</strong><span>Edycja urodzinowa</span></div></div><div class="ticket-foot"><span>DLA DWÓCH OSÓB</span><span>✦</span><span>PAMIĄTKOWE ZAPROSZENIE</span></div></div>
         </div>
-        <p class="reveal-note">Tak, naprawdę idziemy na ABBA Voyage!</p>
         <button class="primary" id="plan-next">Zobacz plan dnia <span>→</span></button>
       </section>
       <section class="screen" data-screen="4" hidden aria-labelledby="plan-title">
-        <div class="intro"><span class="eyebrow">LONDON / BIRTHDAY EDITION</span><h1 id="plan-title" tabindex="-1">Dzień zaplanowany.<br><em>Ty tylko się baw.</em></h1><p>Cztery przystanki. Zero obowiązków. Jeden bardzo dobry plan.</p></div>
+        <div class="intro"><h1 id="plan-title" tabindex="-1">Dzień zaplanowany.<br><em>Ty tylko się baw.</em></h1><p>Cztery przystanki. Zero obowiązków. Jeden bardzo dobry plan.</p></div>
         <div class="timeline">
-          <article><time>12:00</time><div class="timeline-dot"></div><div class="timeline-content"><span>01 / W DRODZE</span><h2>Podróż do Londynu</h2><p>Rozpoczynamy misję urodzinową.</p></div></article>
-          <article><time>13:00</time><div class="timeline-dot"></div><div class="timeline-content"><span>02 / CAFFEINE BREAK</span><h2>Kawa i deser</h2><p>Priorytety zostały ustalone.</p></div></article>
-          <article class="headline-event"><time>15:00</time><div class="timeline-dot"></div><div class="timeline-content"><span>03 / MAIN EVENT ✦</span><h2>ABBA Voyage</h2><p>Czas na Dancing Queen.</p></div></article>
-          <article><time>17:00</time><div class="timeline-dot"></div><div class="timeline-content"><span>04 / DINNER TIME</span><h2>Kolacja</h2><p>Regeneracja po parkiecie.</p></div></article>
+          <article><time>12:00</time><div class="timeline-dot"></div><div class="timeline-content"><h2>Podróż do Londynu</h2><p>Rozpoczynamy misję urodzinową.</p></div></article>
+          <article><time>13:00</time><div class="timeline-dot"></div><div class="timeline-content"><h2>Kawa i deser</h2><p>Priorytety zostały ustalone.</p></div></article>
+          <article class="headline-event"><time>15:00</time><div class="timeline-dot"></div><div class="timeline-content"><h2>ABBA Voyage</h2><p>Czas ruszyć na parkiet!</p></div></article>
+          <article><time>17:00</time><div class="timeline-dot"></div><div class="timeline-content"><h2>Kolacja</h2><p>Regeneracja po parkiecie.</p></div></article>
         </div>
         <button class="primary" id="celebrate">Jestem gotowa! <span>✦</span></button>
         <p id="final-message" class="final-message" role="status" hidden>Misja zaakceptowana. Wszystkiego najlepszego!</p>
         <button class="text-button" id="restart">Przeżyj niespodziankę jeszcze raz ↺</button>
       </section>
     </main>
-    <footer><span>MADE FOR ONE VERY IMPORTANT PERSON.</span><span>© BIRTHDAY.LAB</span></footer>
   </div>
 </body>
 </html>

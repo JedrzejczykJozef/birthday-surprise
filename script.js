@@ -109,12 +109,12 @@ async function runSearch(token) {
 }
 $('reveal-next').addEventListener('click', () => showStage(3));
 $('plan-next').addEventListener('click', () => showStage(4));
-$('celebrate').addEventListener('click', () => { $('final-message').hidden = false; confetti(110); });
+$('celebrate').addEventListener('click', () => { $('celebrate').hidden = true; $('final-message').hidden = false; confetti(110); });
 $('restart').addEventListener('click', () => {
   cancelAnimationFrame(scanFrame); scanning = false; autoScan = false;
   $('scan').classList.remove('scanning'); $('scan').disabled = false; $('scan-alt').disabled = false;
   updateScan(0); $('scan-instruction').textContent = 'Przyłóż palec i przytrzymaj przez 2 sekundy';
-  $('final-message').hidden = true; clearConfetti(); showStage(0);
+  $('final-message').hidden = true; $('celebrate').hidden = false; clearConfetti(); showStage(0);
 });
 const canvas = $('confetti');
 const ctx = canvas.getContext('2d');
